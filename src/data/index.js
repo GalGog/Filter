@@ -1,5 +1,5 @@
 export const newCandidates = [
-    { name: 'Kerrie', skills: ['JavaScript', 'Docker', 'Ruby'] },
+    { name: 'Kerrie', skills: ['JavaScript', 'Docker', 'Ruby' ] },
     { name: 'Mario', skills: ['Python', 'AWS'] },
     { name: 'Jacquline', skills: ['JavaScript', 'Azure'] },
     { name: 'Kathy', skills: ['JavaScript', 'Java'] },

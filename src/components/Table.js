@@ -1,11 +1,11 @@
 import React from 'react';
 import { newCandidates } from '../data';
 
-class TableDisplay extends React.Component {
+class Table extends React.Component {
     render() {
         return (
             <div className="wrapper">
-                <label>Demo Table Of Candidates</label>
+                <label>{this.props.label}</label>
                     <table>
                         <tbody>
                         <tr>
@@ -16,7 +16,7 @@ class TableDisplay extends React.Component {
                             return (
                                 <tr>
                                     <td>{newCandidates[key].name}</td>
-                                    <td>{newCandidates[key].skills}</td>
+                                    <td>{newCandidates[key].skills.join(', ')}</td>
                                 </tr>
                             );
 
@@ -28,4 +28,4 @@ class TableDisplay extends React.Component {
     }
 }
 
-export default TableDisplay;
+export default Table;
