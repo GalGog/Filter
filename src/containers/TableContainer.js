@@ -4,6 +4,8 @@ import React from 'react';
 //Import components
 import Select from '../components/Select';
 import Table from '../components/Table';
+
+//Import utils
 import Filter from '../components/Filter';
 
 // Import data
