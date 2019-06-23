@@ -43,8 +43,8 @@ class TableContainer extends React.Component {
         return (
             <div>
                 <Table
-
-
+                    title='Demo Table'
+                    data = {newCandidates}
                 />
                 <Select
                     options={this.getSkills()}

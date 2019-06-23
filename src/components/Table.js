@@ -1,22 +1,22 @@
 import React from 'react';
-import { newCandidates } from '../data';
 
 class Table extends React.Component {
     render() {
+        const { label, data } = this.props;
         return (
             <div className="wrapper">
-                <label>{this.props.label}</label>
+                <label>{label}</label>
                     <table>
                         <tbody>
                         <tr>
                             <td>Name</td>
                             <td>Skills</td>
                         </tr>
-                        {Object.keys(newCandidates).map(function(key) {
+                        {Object.keys(data).map(function(key) {
                             return (
                                 <tr>
-                                    <td>{newCandidates[key].name}</td>
-                                    <td>{newCandidates[key].skills.join(', ')}</td>
+                                    <td>{data[key].name}</td>
+                                    <td>{data[key].skills.join(', ')}</td>
                                 </tr>
                             );
 
