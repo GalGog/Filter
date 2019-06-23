@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Selector extends React.Component {
+class Select extends React.Component {
     static renderSelect(options, className, onChange) {
 
         const MakeItem = function (X) {
@@ -19,11 +19,11 @@ class Selector extends React.Component {
         return (
             <div className="filter">
                 <label>Filter by Skills
-                    {Selector.renderSelect(options, className, onChange)}
+                    {Select.renderSelect(options, className, onChange)}
                 </label>
             </div>
         );
     }
 }
 
-export default Selector;
+export default Select;

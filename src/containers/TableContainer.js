@@ -2,7 +2,7 @@
 import React from 'react';
 
 //Import components
-import Selector from '../components/Selector';
+import Select from '../components/Select';
 import Table from '../components/Table';
 import Filter from '../components/Filter';
 
@@ -22,7 +22,7 @@ class TableContainer extends React.Component {
         this.setState({
             selectValue: e.target.value
         });
-        console.log(e.target.value);
+        Filter(newCandidates, e.target.value);
     }
     getSkills() {
         let uniqueSkills = [];
@@ -42,13 +42,15 @@ class TableContainer extends React.Component {
 
         return (
             <div>
-                <Table />
-                <Selector
+                <Table
+
+
+                />
+                <Select
                     options={this.getSkills()}
                     className={'list'}
                     onChange={this.handleOnChange}
                 />
-                <Filter />
             </div>
         )
     }
