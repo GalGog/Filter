@@ -14,7 +14,7 @@ class Table extends React.Component {
                         </tr>
                         {Object.keys(data).map(function(key) {
                             return (
-                                <tr>
+                                <tr key={key}>
                                     <td>{data[key].name}</td>
                                     <td>{data[key].skills.join(', ')}</td>
                                 </tr>
