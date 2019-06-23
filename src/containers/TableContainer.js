@@ -13,16 +13,17 @@ class TableContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectValue: 'all' // use this as default
+            filteredData: false,
         };
         this.handleOnChange = this.handleOnChange.bind(this);
     }
 
     handleOnChange(e) {
-        this.setState({
-            selectValue: e.target.value
-        });
-        Filter(newCandidates, e.target.value);
+        this.setState(
+            {
+                filteredData: Filter(newCandidates, e.target.value),
+            }
+        )
     }
     getSkills() {
         let uniqueSkills = [];
@@ -43,7 +44,7 @@ class TableContainer extends React.Component {
         return (
             <div>
                 <Table
-                    title='Demo Table'
+                    label='Demo Table'
                     data = {newCandidates}
                 />
                 <Select
@@ -51,6 +52,12 @@ class TableContainer extends React.Component {
                     className={'list'}
                     onChange={this.handleOnChange}
                 />
+                { this.state.filteredData ?
+                    <Table
+                        label='Rendered Table'
+                        data = {this.state.filteredData}
+                    /> : null
+                }
             </div>
         )
     }
