@@ -1,14 +1,15 @@
 .table-container{
-    background-color: #282c34;
     width: 100%;
     font-size: 24px;
 }
 
 .wrapper {
-    background-color: #61dafb;
+    background-color: lightgray;
     width: 80%;
     margin: auto;
 }
+
+
 .wrapper table {
     color: #333;
     font-family: Helvetica, Arial, sans-serif;
@@ -17,7 +18,7 @@
 }
 header {
     width: 100%;
-    background-color: #ccc;
+    background-color: lightgray;
     color: blue;
     padding: 10px;
     text-align: center;
@@ -49,3 +50,12 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 tr td:hover { background: #666; color: #FFF; }
 /* Hover cell effect! */
 
+.filter {
+    margin: auto;
+    width: 80%;
+    padding: 30px;
+}
+.list{
+    background-color: darkgray;
+    margin-left: 10px;
+}
