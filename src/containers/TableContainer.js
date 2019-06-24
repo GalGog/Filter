@@ -11,6 +11,9 @@ import Filter from '../components/Filter';
 // Import data
 import {newCandidates} from '../data';
 
+//import css
+import './index.css';
+
 class TableContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -44,9 +47,9 @@ class TableContainer extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="table-container">
                 <Table
-                    label='Demo Table'
+                    header='Demo Table'
                     data = {newCandidates}
                 />
                 <Select
@@ -56,7 +59,7 @@ class TableContainer extends React.Component {
                 />
                 { this.state.filteredData ?
                     <Table
-                        label='Rendered Table'
+                        header='Rendered Table'
                         data = {this.state.filteredData}
                     /> : null
                 }

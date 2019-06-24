@@ -1,11 +1,12 @@
 import React from 'react';
 
+
 class Table extends React.Component {
     render() {
-        const { label, data } = this.props;
+        const { header, data } = this.props;
         return (
             <div className="wrapper">
-                <label>{label}</label>
+                <header>{header}</header>
                     <table>
                         <tbody>
                         <tr>
